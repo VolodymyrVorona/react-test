@@ -5,7 +5,6 @@ import paintings from './paintings.json';
 export default function App() {
   return (
     <>
-      {/* <PaingingList items={paintings} /> */}
       <Section title="Топ тижня">
         <PaingingList items={paintings} />
       </Section>
