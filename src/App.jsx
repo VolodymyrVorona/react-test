@@ -8,9 +8,6 @@ export default function App() {
       <Section title="Топ тижня">
         <PaingingList items={paintings} />
       </Section>
-      <Section>
-        <PaingingList items={paintings} />
-      </Section>
     </>
   );
 }
