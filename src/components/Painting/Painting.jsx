@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
-
+import s from './Painting.module.css';
 function Painting({ url, title, authorName, profileUrl, price, quantity }) {
   return (
-    <div>
+    <div className={s.container}>
       <img src={url} alt={title} width="480" />
       <h2>{title}</h2>
       <p>
