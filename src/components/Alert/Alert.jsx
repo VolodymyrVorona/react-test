@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import s from './Alert.module.css';
-console.log(s);
 
 function Alert({ text, type }) {
   return (
