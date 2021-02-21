@@ -1,7 +1,8 @@
-import Section from './components/Section';
+import Section from './components/Section/Section';
 import PaingingList from './components/PaingingList';
 import Colorpicker from './components/ColorPicker/ColorpPicker';
 import Alert from './components/Alert/Alert';
+import Container from './components/Container/Container';
 import paintings from './paintings.json';
 
 const ColorPickerOptions = [
@@ -15,14 +16,26 @@ const ColorPickerOptions = [
 
 export default function App() {
   return (
-    <div>
-      <Section>
-        <Alert text="Шеф, все пропало!" type="success" />
-        <Alert text="Шеф, все пропало!" type="warning" />
-        <Alert text="Шеф, все пропало!" type="error" />
-        <Colorpicker options={ColorPickerOptions} />
-        <PaingingList items={paintings} />
+    <>
+      <Section title="Alert">
+        <Container>
+          <Alert text="Шеф, все пропало!" type="success" />
+          <Alert text="Шеф, все пропало!" type="warning" />
+          <Alert text="Шеф, все пропало!" type="error" />
+        </Container>
       </Section>
-    </div>
+
+      <Section title="Color Picker">
+        <Container>
+          <Colorpicker options={ColorPickerOptions} />
+        </Container>
+      </Section>
+
+      <Section title="Paintings">
+        <Container>
+          <PaingingList items={paintings} />
+        </Container>
+      </Section>
+    </>
   );
 }
