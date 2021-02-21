@@ -1,5 +1,4 @@
 import s from './ColorPicker.module.css';
-console.log(s);
 
 function Colorpicker({ options }) {
   return (
