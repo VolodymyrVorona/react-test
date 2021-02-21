@@ -8,6 +8,7 @@ function Colorpicker({ options }) {
       <div>
         {options.map(option => (
           <span
+            key={options.color}
             className={s.option}
             style={{ backgroundColor: option.color }}
           ></span>
