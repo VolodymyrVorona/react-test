@@ -1,23 +1,33 @@
 import Section from './components/Section/Section';
-import PaingingList from './components/PaingingList';
-import Colorpicker from './components/ColorPicker/ColorpPicker';
-import Alert from './components/Alert/Alert';
-import Container from './components/Container/Container';
-import paintings from './paintings.json';
+// import PaingingList from './components/PaingingList';
+// import Colorpicker from './components/ColorPicker/ColorpPicker';
+// import Alert from './components/Alert/Alert';
+// import Container from './components/Container/Container';
+// import paintings from './paintings.json';
+import Counter from './components/Counter/Counter';
+import Dropdown from './components/Dropdown/Dropdown';
 
-const ColorPickerOptions = [
-  { lable: 'red', color: '#F44336' },
-  { lable: 'green', color: '#4CAF50' },
-  { lable: 'blue', color: '#2196F3' },
-  { lable: 'grey', color: '#607D8B' },
-  { lable: 'pink', color: '#E91E63' },
-  { lable: 'indigo', color: '#3F51B5' },
-];
+// const ColorPickerOptions = [
+//   { lable: 'red', color: '#F44336' },
+//   { lable: 'green', color: '#4CAF50' },
+//   { lable: 'blue', color: '#2196F3' },
+//   { lable: 'grey', color: '#607D8B' },
+//   { lable: 'pink', color: '#E91E63' },
+//   { lable: 'indigo', color: '#3F51B5' },
+// ];
 
-export default function App() {
+const App = () => {
   return (
     <>
-      <Section title="Alert">
+      <Section title="Состояние компонента">
+        <Counter />
+      </Section>
+
+      <Section title="Dropdown">
+        <Dropdown />
+      </Section>
+
+      {/* <Section title="Alert">
         <Container>
           <Alert text="Шеф, все пропало!" type="success" />
           <Alert text="Шеф, все пропало!" type="warning" />
@@ -35,7 +45,9 @@ export default function App() {
         <Container>
           <PaingingList items={paintings} />
         </Container>
-      </Section>
+      </Section> */}
     </>
   );
-}
+};
+
+export default App;
